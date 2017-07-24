@@ -1,0 +1,33 @@
+div.navbar-header{
+	background-color: #000000;
+	height: 60px;
+	color: #fff;
+}
+
+div.sidebar{
+	background-color: #4A4E4F;
+	height:500px;
+	color: #fff;
+}
+div.content{
+	background-color: #D0D9DB;
+	height: 500px;
+}
+
+ul{
+	list-style: none;
+
+}
+ul a{
+	color: #fff;
+
+}
+div.div-image{
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	height: 240px;
+}
+div.div-text{
+	border-bottom: 1px solid #000;
+	height: 240px;
+}
