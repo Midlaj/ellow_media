@@ -118,7 +118,7 @@
 <div class='col-lg-4 col-md-6 col-xs-12 col-sm-6 wow slideInDown'>
 <a class="fancybox" rel="ligthbox" href="<?php echo $img['vchr_place']; ?>">
 <figure class="snip0058 green">
-<img src="http://localhost/WEB/admin/uploads/<?php echo $img['vchr_place']; ?>" style="width: 350px; height: 250px;">
+<img src="http://localhost/Ellowmedia/WEB/admin/uploads/<?php echo $img['vchr_place']; ?>" style="width: 350px; height: 250px;">
 <figcaption>
     <p><span>Long sight hilighed disply at Azhirayipaddi. Size : 32X12 Sq</span></p>
     <h2>Azhirayipaddi </h2>
