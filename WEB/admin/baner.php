@@ -65,7 +65,11 @@ include("settings.php");
 	 				<div class="form-group">
 						<label>Image</label>
 	 					<input name="image" id="image" type="file" class="form-control" />
-					</div>             
+					</div> 
+                    <div class="form-group">
+                    <label>Title</label>
+                    <input class="form-control" name="title" type="text"  id="title" placeholder="">
+                    </div>              
 	 				<div class="form-group">
 	 				<button type="submit" name="add" id="submit" class="btn btn-primary"  
 	 				onClick="return reg();">Save</button>
@@ -100,6 +104,7 @@ include("settings.php");
                     		?>
                     		<tr>
                         	<td height="40">
+                            <?php echo $rw['vchr_title'];?>
                             <img class="featurette-image img-responsive" src="<?php echo $UPLOAD_PATH.$rw['vchr_banner_name'];?>" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
                         	</td>	
                         	<td><div class="btn-group">
@@ -111,60 +116,37 @@ include("settings.php");
                                     <a href="edit_baner.php?id=<?php echo $rw['pk_int_banner_id']; ?>" role="button">EDIT</a>
                                 </li>
                                 <li>
-                                    <a href="delete_baner.php?id=<?php echo $rw['pk_int_banner_id']; ?>');" role="button">DELETE
+                                    <a href="delete_baner.php?id=<?php echo $rw['pk_int_banner_id']; ?>" role="button">DELETE
                                     </a>
-                                </li>
+                                </li> 
                             </ul>
-                        </div></td>
-                    </tr>
-                     <?php } ?>
-            </form>
-        </table>
+                            </div></td>
+                            </tr>
+                            <?php } ?>
+                            </form>
+                            </table>
+                            <?php
+                            // $option['counter'] = $counter;
+                            // $option['limit'] = $limit;
+                            // $option['totalrow'] = $totalrow;
 
+                            // if(!@$search){
+                            //     $option['url'] = "";
+                            // }else{
+                            //     $option['url'] = "";
+                            // }
 
-        <?php
-        // $option['counter'] = $counter;
-        // $option['limit'] = $limit;
-        // $option['totalrow'] = $totalrow;
+                            // include('paginate.php');
 
-        // if(!@$search){
-        //     $option['url'] = "";
-        // }else{
-        //     $option['url'] = "";
-        // }
-
-        // include('paginate.php');
-
-        ?>
-
-    </li>
-  
-</ul>
- 
-  
-  
-  
-
-     </div>
-
-       
-       </div>
-       
-       
-       
-            
+                            ?>
+                        </li>
+                    </ul>
+                    </div>
                 </div>
-                <!-- /.row -->
-                
-                
-         
-                
-            
-
             </div>
-
+            <!-- /.row -->
         </div>
-
+        </div>
     </div>
     <!-- /#wrapper -->
 

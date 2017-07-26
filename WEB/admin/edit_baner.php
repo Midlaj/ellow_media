@@ -62,21 +62,28 @@ $rw=$stm->fetch();
                    	<h3 class="">Edit Baner</h3>
                		<div class="box-primary">
 	               		<form method="post" action="update_baner.php" enctype="multipart/form-data">
-	 					<div class="form-group">
+	 					
+                        <div class="form-group">
 						<label>Image</label> 
 						<?php  $img=$rw['vchr_banner_name']; 
 						if(!empty($img)){ ?>
 							<img src="uploads/<?php echo $img ?>" width="110" height="80" /><br />
 	 					<?php } ?>
 	 					<input name="image" type="file" id="image" class="form-control">
-						</div>        
+						</div>  
+
+                        <div class="form-group">
+                        <label>title</label>
+                        <input class="form-control" name="title" type="text"  id="title" value="<?php echo $rw['vchr_title']; ?>" placeholder="title">
+                        </div>      
 	 					
 	 					<div class="form-group">
 	 					<input type="hidden" name="userid" value="<?php echo $id ?>" />
-	 					<button type="submit" id="submit" class="btn btn-primary" 
+	 					<button type="submit" id="submit" name="update" class="btn btn-primary" 
 	 					onClick="return edit(<?php echo $id?>);">Update</button>
 	 					</div>	
-	 					</form>               
+	 					
+                        </form>               
         			</div>
    				</div>
 				</div>

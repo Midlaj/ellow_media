@@ -22,179 +22,39 @@
 </head>
 
 <body>
-<?php include("header.php"); ?>
+    <!-- header -->
+    <?php include("header.php"); ?>
+    <!-- Show Banner Image -->
+    <?php include("banner.php"); ?>
 
 <div class="clearfix"></div>
-<section class="banner">
 
-<div class="slider">
-            
-  <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
-
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="images/slider_01.jpg" alt="First slide">
-        <div class="carousel-caption wow fadeInLeft">
-          <h3 class="">
-          Hoardings across boundaries
-          </h3>                
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="images/slider_02.jpg" alt="Second slide">
-        <div class="carousel-caption wow fadeInUp">
-          <h3 class="">
-          We care your business</h3>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="images/slider_03.jpg" alt="Third slide">
-        <div class="carousel-caption wow fadeInRight">
-        <h3 class="">
-        The Best advertising company</h3>
-        <!--         <p class="wow fadeInUp">
-              own a branded website</p>-->
-        </div>
-      </div>
+    <div class="container">
+    <!-- News Feed -->
+    <?php include("index_news.php"); ?>     
     </div>
 
-    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-      <div class="leftarrow">
-      <img src="images/slideleft.png" class="img-responsive">
-      </div>
-    </a>
-
-    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-      <div class="rightarrow">
-      <img src="images/slideright.png" class="img-responsive">
-      </div>
-    </a>
-  </div>
-</div>
-</section>
-
-<div class="clearfix"></div>
-
-<div class="container">
-
-  <div class="col-lg-6">
-    <div class="abtcontent">
-    <h3>about<span class="pink bold">&nbsp;Malabar Advertising</span></h3>
-    <p>Malabar Advertising Industries is one of the pioneers in the field of Outdoor Advertising in Kerala. The company has spread far and wide and now has branches across and beyond the boundaries. In the 29 years of its existence, it has build a strong base root and has been providing solutions to the top brands in the market through Hoardings and Billboards. The dreamer and dynamic duo, Mr. A Balakrishnan and Mr. A Santhosh Kumar who founded this company, believe in the tag line 'Publicity Guaranteed'. Our hoardings are installed in the most prominent places within the city as well as in strategic places along highways and nodal points on highways and outskirts. Our vision is to be the best Outdoor Advertising company and satisfy our customers to the fullest.</p><p>
-
-    The company is focusing on using some of the latest technology in the field of outdoor advertising. It is our mission to ensure complete satisfaction to our clients. We have a team of dedicated people who work with evangelical spirit and enthusiasm. We have a host of satisfied clients and the numbers are growing. It is our aim to be the best outdoor advertising company in the country.</p>
-    <div class="more"><a href="about.php">Read More</a></div>
-  </div>
-</div>
-
-<div class="col-lg-6">
-  <div class="abtimg">
+    <div class="col-lg-6">
+    <div class="abtimg">
     <img src="images/abtimg.jpg" class="img-responsive">
-  </div>
+    </div>
 </div>
 </div>
 
 <div class="clearfix"></div>
 
-<div class="tabsection">
+    <div class="tabsection">
+    <div class="container">
+        <!-- Show Available images -->
+        <?php include("index_available.php"); ?>
+        <!-- Show Sold Images -->
+        <?php include("index_sold.php"); ?> 
+    </div>
+    </div>
+
+<div class="clearfix"></div>
 
   <div class="container">
-
-    <div class="col-md-6">
-      <div class="scrolone">
-      <h3>Sold out</h3>
-        <div id="owl-demo" class="owl-carousel">                
-          <div class="item">
-            <a href="#">
-              <figure class="snip1470">
-                <img src="images/gallery/sold01.jpg" class="img-responsive"> 
-                <figcaption>
-                <h2>Adivaaram - Calicut</h2>
-                </figcaption>
-              </figure>
-            </a>
-          </div>
-         
-          <div class="item">
-          <a href="#">
-          <figure class="snip1470">
-          <img src="images/gallery/sold02.jpg" class="img-responsive"> 
-            <figcaption>
-              <h2>Adivaaram - Calicut</h2>
-            </figcaption>
-          </figure>
-          </a>
-          </div>
-           
-          <div class="item">
-          <a href="#">
-          <figure class="snip1470">
-          <img src="images/gallery/sold03.jpg" class="img-responsive"> 
-            <figcaption>
-              <h2>Calicut </h2>
-            </figcaption>
-          </figure>
-          </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="scrolone">
-        <h3>Available</h3>
-          <div id="availa" class="owl-carousel">              
-            
-            <div class="item">
-            <a href="#">
-            <figure class="snip1470">
-            <img src="images/gallery/project1.jpg" class="img-responsive"> 
-              <figcaption>
-                <h2>Poyilkavu - Calicut</h2>
-              </figcaption>
-            </figure>
-            </a>
-            </div>
-
-            <div class="item">
-            <a href="#">
-            <figure class="snip1470">
-            <img src="images/gallery/project2.jpg" class="img-responsive"> 
-              <figcaption>
-                <h2>Kakkancheri - Ramanattukara</h2>
-              </figcaption>
-            </figure>
-            </a>
-            </div>
-   
-            <div class="item">
-            <a href="#">
-            <figure class="snip1470">
-            <img src="images/gallery/project3.jpg" class="img-responsive"> 
-              <figcaption>
-                <h2>Panayi -Calicut</h2>
-              </figcaption>
-            </figure>
-            </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-<div class="clearfix"></div>
-
-<div class="container">
 
   <div class="col-md-12">
     <div class="clients">

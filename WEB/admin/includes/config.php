@@ -1,9 +1,9 @@
 <?php
 ob_start();
 session_start();
-
+ 
 //set timezone
-date_default_timezone_set('Asia/India');
+//date_default_timezone_set('Asia/India');
 //$con=@mysql_connect("localhost","tu68rywz88z","Rtu%4@90*(&m") or die("Error Host");
 //database credentials
 define('DBHOST','localhost');

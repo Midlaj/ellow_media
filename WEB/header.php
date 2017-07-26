@@ -36,7 +36,7 @@
       <li<?php if ($thisPage=="avail") echo " class=\"active\""; ?>><a href="availability.php">AVAILABILITY</a></li>
        <li<?php if ($thisPage=="inquiry") echo " class=\"active\""; ?>><a href="inquiry.php">INQUIRY</a></li>
       <li<?php if ($thisPage=="contact") echo " class=\"active\""; ?>><a href="contact.php">CONTACT</a></li>
-      <li<?php if ($thisPage=="login") echo " class=\"active\""; ?>><a href="login.php">login</a></li>
+      
 
    
       </ul>

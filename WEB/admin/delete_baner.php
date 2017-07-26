@@ -1,7 +1,6 @@
 <?php
  include("include/dbconnect.php");
                                
-
  $id=$_GET['id'];
  $stm = $link->prepare("DELETE FROM tbl_banner where pk_int_banner_id = $id");
  $stm->execute();

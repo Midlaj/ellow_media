@@ -89,7 +89,10 @@
                                 <a href="news.php">News</a>
                             </li>
                             <li>
-                                <a href="peoplesays.php">People saying</a>
+                                <a href="sold_out.php">Sold out</a>
+                            </li>
+                            <li>
+                                <a href="available.php">Available</a>
                             </li>
                         </ul>
                     </li>
@@ -117,7 +120,7 @@
                         <a href="" class="dropdown-toggle" data-toggle="dropdown">AVAILABILTY<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li >
-                                <a href="placements.php">Add Placements</a>
+                                <a href="place.php">Add Place</a>
                             </li>
                         </ul>
                     </li>

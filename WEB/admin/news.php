@@ -93,41 +93,24 @@ include("settings.php");
 		                        <th width="28%">description</th>
 		                        
 		                        <th width="9%"></th>
-		                    </tr>
+		                    </tr> 
                 			<form>
-			                    <?php
-			                    $id = (int)$_REQUEST['id'];
-			                    if(!$search){
-			                        $orderby = "ORDER BY id DESC";
-			                        $were ="id";
-			                    }
-			                    $letter = trim($_REQUEST['letter']);
-			                    if($letter){
+		                    <?php
+		                    $stm = $link->prepare("SELECT count(pk_int_news_id) as cnt FROM tbl_news");
+							$stm->execute();
+							$rw1=$stm->fetch();
+	
+			               	$totalrow= (int)$rw1['cnt'];
 
-			                        $orderby = "order by name like '$letter%' desc";
-			                    }else{
-			                        $orderby = "ORDER BY id DESC";
-			                    }
-
-			                    $limit =2;
-
-			                    $counter = (int)$_GET['counter'];
-			                    $limitis = $limit*$counter;
-
-
-			                    $query=mysql_query("select count(id) as cnt from newsandevents where $were $orderby  ");
-			                    $rw1 = mysql_fetch_array($query);
-			                    $totalrow= (int)$rw1['cnt'];
-
-
-			                    $query=mysql_query("select *from newsandevents where $were $orderby limit $limitis,$limit   ");
-			                    while($rw = mysql_fetch_array($query))
-			                    {
-			                    ?>
+			            	$stm = $link->prepare("SELECT * FROM tbl_news");
+			                $stm->execute();
+			                while ($rw=$stm->fetch())			                
+							{
+							?>
                             <tr>
-                                <td><?php echo $rw['title']; ?></td>
-                                <td><?php echo $rw['description']; ?></td>
-								<td><?php echo $rw['vdo']; ?></td>
+                                <td><?php echo $rw['vchr_title']; ?></td>
+                                <!-- <td><?php //echo $rw['vchr_description']; ?></td> -->
+								<td><?php echo $rw['vchr_description']; ?></td>
                                 <td>
                                 	<div class="btn-group">
                                     	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -135,10 +118,10 @@ include("settings.php");
                                     	</button>
                                     <ul class="dropdown-menu" role="menu">
                                         <li>
-                                            <a href="edit_ser.php?id=<?php echo $rw['id']; ?>" role="button">EDIT</a>
+                                            <a href="edit_ser.php?id=<?php echo $rw['pk_int_news_id']; ?>" role="button">EDIT</a>
                                         </li>
                                         <li>
-                                            <a onClick="delservi('<?php echo $rw['id']; ?>');" role="button">DELETE
+                                            <a href="delete_ser.php?id=<?php echo $rw['pk_int_news_id']; ?>" role="button">DELETE
                                             </a>
                                         </li>
                                     </ul>
@@ -149,15 +132,15 @@ include("settings.php");
                     		</form>
                 			</table>
 			                <?php
-			                $option['counter'] = $counter;
-			                $option['limit'] = $limit;
-			                $option['totalrow'] = $totalrow;
+			                // $option['counter'] = $counter;
+			                // $option['limit'] = $limit;
+			                // $option['totalrow'] = $totalrow;
 
-			                if(!@$search){
-			                    $option['url'] = "";
-			                }else{
-			                    $option['url'] = "";
-			                }
+			                // if(!@$search){
+			                //     $option['url'] = "";
+			                // }else{
+			                //     $option['url'] = "";
+			                // }
 
 			                include('paginate.php');
 			                ?>
